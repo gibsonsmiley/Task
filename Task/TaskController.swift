@@ -27,9 +27,10 @@ class TaskController {
         return [sampleTask1, sampleTask2, sampleTask3, sampleTask4]
     }
     
-    var tasks:[Task] {
-        
+    private func tasksWithPredicate(predicate: NSPredicate?) -> [Task] {
         let request = NSFetchRequest(entityName: "Task")
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "due", ascending: true)]
         
         do {
             return try Stack.sharedStack.managedObjectContext.executeFetchRequest(request) as! [Task]
@@ -38,14 +39,19 @@ class TaskController {
         }
     }
     
-    var completedTasks:[Task] {
+    var tasks:[Task] {
         
-        return tasks.filter({$0.isComplete.boolValue})
+        return tasksWithPredicate(nil)
+    }
+    
+    var completedTasks:[Task] {
+        let predicate = NSPredicate(format: "isComplete == TRUE")
+        return tasksWithPredicate(predicate)
     }
     
     var incompleteTasks:[Task] {
-        
-        return tasks.filter({!$0.isComplete.boolValue})
+        let predicate = NSPredicate(format: "isComplete == FALSE")
+        return tasksWithPredicate(predicate)
     }
     
     func addTask(task: Task) {

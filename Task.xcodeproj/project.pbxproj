@@ -67,6 +67,7 @@
 		68D81D911BD89FD100A9F8FE /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		68D81D971BD8A05B00A9F8FE /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		68D81D981BD8A05B00A9F8FE /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F0F9FF7D1C8DF3C0005A2EE7 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +221,7 @@
 				TargetAttributes = {
 					68D78A211BD6C26400509A87 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = Q852ZVJA4R;
 					};
 					68D78A351BD6C26500509A87 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -438,10 +440,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Task/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devmtn.Task;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gibsonsmiley.Task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,10 +453,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Task/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devmtn.Task;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gibsonsmiley.Task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -549,9 +555,10 @@
 		68D81D8F1BD89FD100A9F8FE /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F0F9FF7D1C8DF3C0005A2EE7 /* Model 2.xcdatamodel */,
 				68D81D901BD89FD100A9F8FE /* Model.xcdatamodel */,
 			);
-			currentVersion = 68D81D901BD89FD100A9F8FE /* Model.xcdatamodel */;
+			currentVersion = F0F9FF7D1C8DF3C0005A2EE7 /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
